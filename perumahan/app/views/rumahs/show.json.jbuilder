@@ -1,0 +1,1 @@
+json.partial! "rumahs/rumah", rumah: @rumah
