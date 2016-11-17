@@ -1,0 +1,1 @@
+json.array! @rerumah, partial: 'rerumah/rumah', as: :rumah

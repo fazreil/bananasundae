@@ -1,0 +1,1 @@
+json.array! @tetaman, partial: 'tetaman/taman', as: :taman

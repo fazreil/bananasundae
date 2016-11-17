@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombor:</strong>
+  <%= @rumah.nombor %>
+</p>
+
+<p>
+  <strong>Sah:</strong>
+  <%= @rumah.sah %>
+</p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @rumah.nama %>
+</p>
+
+<p>
+  <strong>Telefon:</strong>
+  <%= @rumah.telefon %>
+</p>
+
+<p>
+  <strong>Nota:</strong>
+  <%= @rumah.nota %>
+</p>
+
+<%= link_to 'Edit', edit_rumah_path(@rumah) %> |
+<%= link_to 'Back', rerumah_path %>

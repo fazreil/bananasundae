@@ -1,0 +1,2 @@
+module TetamanHelper
+end

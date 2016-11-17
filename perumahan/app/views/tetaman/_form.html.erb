@@ -1,0 +1,25 @@
+<%= form_for(@taman) do |f| %>
+  <% if @taman.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@taman.errors.count, "error") %> prohibited this taman from being saved:</h2>
+
+      <ul>
+      <% @taman.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nama %><br>
+    <%= f.text_field :nama %>
+  </div>
+  <div class="field">
+    <%= f.label :nota %><br>
+    <%= f.text_field :nota %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

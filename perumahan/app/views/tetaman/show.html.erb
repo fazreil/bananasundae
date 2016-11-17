@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @taman.nama %>
+</p>
+
+<p>
+  <strong>Nota:</strong>
+  <%= @taman.nota %>
+</p>
+
+<%= link_to 'Edit', edit_taman_path(@taman) %> |
+<%= link_to 'Back', tetaman_path %>

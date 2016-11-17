@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class RumahsControllerTest < ActionController::TestCase
+class RerumahControllerTest < ActionController::TestCase
   setup do
-    @rumah = rumahs(:one)
+    @rumah = rerumah(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:rumahs)
+    assert_not_nil assigns(:rerumah)
   end
 
   test "should get new" do
@@ -18,7 +18,7 @@ class RumahsControllerTest < ActionController::TestCase
 
   test "should create rumah" do
     assert_difference('Rumah.count') do
-      post :create, rumah: { nombor: @rumah.nombor, sah: @rumah.sah }
+      post :create, rumah: { nama: @rumah.nama, nombor: @rumah.nombor, nota: @rumah.nota, sah: @rumah.sah, telefon: @rumah.telefon }
     end
 
     assert_redirected_to rumah_path(assigns(:rumah))
@@ -35,7 +35,7 @@ class RumahsControllerTest < ActionController::TestCase
   end
 
   test "should update rumah" do
-    patch :update, id: @rumah, rumah: { nombor: @rumah.nombor, sah: @rumah.sah }
+    patch :update, id: @rumah, rumah: { nama: @rumah.nama, nombor: @rumah.nombor, nota: @rumah.nota, sah: @rumah.sah, telefon: @rumah.telefon }
     assert_redirected_to rumah_path(assigns(:rumah))
   end
 
@@ -44,6 +44,6 @@ class RumahsControllerTest < ActionController::TestCase
       delete :destroy, id: @rumah
     end
 
-    assert_redirected_to rumahs_path
+    assert_redirected_to rerumah_path
   end
 end

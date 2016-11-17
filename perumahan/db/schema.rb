@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161116143030) do
+ActiveRecord::Schema.define(version: 20161117154003) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,9 +49,65 @@ ActiveRecord::Schema.define(version: 20161116143030) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "bayaran", force: :cascade do |t|
+    t.date     "tarikh"
+    t.decimal  "jumlah"
+    t.string   "nota"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "rumah_id"
+  end
+
+  create_table "bayarans", force: :cascade do |t|
+    t.date     "tarikh"
+    t.money    "jumlah",     scale: 2
+    t.string   "nota"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "rumah_id"
+  end
+
+  create_table "bayarans_rumahs", id: false, force: :cascade do |t|
+    t.integer "rumah_id",   null: false
+    t.integer "bayaran_id", null: false
+  end
+
+  create_table "rerumah", force: :cascade do |t|
+    t.string   "nombor"
+    t.boolean  "sah"
+    t.string   "nama"
+    t.string   "telefon"
+    t.string   "nota"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "taman_id"
+  end
+
   create_table "rumahs", force: :cascade do |t|
     t.string   "nombor"
     t.boolean  "sah"
+    t.string   "nama"
+    t.string   "telefon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "taman_id"
+  end
+
+  create_table "rumahs_tamen", id: false, force: :cascade do |t|
+    t.integer "taman_id", null: false
+    t.integer "rumah_id", null: false
+  end
+
+  create_table "tamen", force: :cascade do |t|
+    t.string   "nama"
+    t.string   "nota"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tetaman", force: :cascade do |t|
+    t.string   "nama"
+    t.string   "nota"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

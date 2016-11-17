@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tarikh: 2016-11-17
+  jumlah: 9.99
+  nota: MyString
+
+two:
+  tarikh: 2016-11-17
+  jumlah: 9.99
+  nota: MyString

@@ -1,0 +1,29 @@
+<%= form_for(@bayaran) do |f| %>
+  <% if @bayaran.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bayaran.errors.count, "error") %> prohibited this bayaran from being saved:</h2>
+
+      <ul>
+      <% @bayaran.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tarikh %><br>
+    <%= f.date_select :tarikh %>
+  </div>
+  <div class="field">
+    <%= f.label :jumlah %><br>
+    <%= f.text_field :jumlah %>
+  </div>
+  <div class="field">
+    <%= f.label :nota %><br>
+    <%= f.text_field :nota %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

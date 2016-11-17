@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tarikh:</strong>
+  <%= @bayaran.tarikh %>
+</p>
+
+<p>
+  <strong>Jumlah:</strong>
+  <%= @bayaran.jumlah %>
+</p>
+
+<p>
+  <strong>Nota:</strong>
+  <%= @bayaran.nota %>
+</p>
+
+<%= link_to 'Edit', edit_bayaran_path(@bayaran) %> |
+<%= link_to 'Back', bayaran_index_path %>

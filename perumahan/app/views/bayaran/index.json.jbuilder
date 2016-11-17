@@ -1,0 +1,1 @@
+json.array! @bayaran, partial: 'bayaran/bayaran', as: :bayaran

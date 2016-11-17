@@ -3,7 +3,13 @@
 one:
   nombor: MyString
   sah: false
+  nama: MyString
+  telefon: MyString
+  nota: MyString
 
 two:
   nombor: MyString
   sah: false
+  nama: MyString
+  telefon: MyString
+  nota: MyString

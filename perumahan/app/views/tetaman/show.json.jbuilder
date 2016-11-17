@@ -1,0 +1,1 @@
+json.partial! "tetaman/taman", taman: @taman

@@ -1,21 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Rumahs</h1>
+<h1>Listing Rerumah</h1>
 
 <table>
   <thead>
     <tr>
       <th>Nombor</th>
       <th>Sah</th>
+      <th>Nama</th>
+      <th>Telefon</th>
+      <th>Nota</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @rumahs.each do |rumah| %>
+    <% @rerumah.each do |rumah| %>
       <tr>
         <td><%= rumah.nombor %></td>
         <td><%= rumah.sah %></td>
+        <td><%= rumah.nama %></td>
+        <td><%= rumah.telefon %></td>
+        <td><%= rumah.nota %></td>
         <td><%= link_to 'Show', rumah %></td>
         <td><%= link_to 'Edit', edit_rumah_path(rumah) %></td>
         <td><%= link_to 'Destroy', rumah, method: :delete, data: { confirm: 'Are you sure?' } %></td>
