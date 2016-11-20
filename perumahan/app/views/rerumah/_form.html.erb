@@ -31,6 +31,11 @@
     <%= f.label :nota %><br>
     <%= f.text_field :nota %>
   </div>
+  <div class="field">
+    <%= f.label :taman %><br>
+    <% @tetaman = Taman.all %>
+    <%= f.collection_select :taman_id, @tetaman, :id, :nama, prompt:"Pilih taman" %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

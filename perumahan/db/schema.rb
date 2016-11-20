@@ -58,20 +58,6 @@ ActiveRecord::Schema.define(version: 20161117154003) do
     t.integer  "rumah_id"
   end
 
-  create_table "bayarans", force: :cascade do |t|
-    t.date     "tarikh"
-    t.money    "jumlah",     scale: 2
-    t.string   "nota"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.integer  "rumah_id"
-  end
-
-  create_table "bayarans_rumahs", id: false, force: :cascade do |t|
-    t.integer "rumah_id",   null: false
-    t.integer "bayaran_id", null: false
-  end
-
   create_table "rerumah", force: :cascade do |t|
     t.string   "nombor"
     t.boolean  "sah"
@@ -81,28 +67,6 @@ ActiveRecord::Schema.define(version: 20161117154003) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "taman_id"
-  end
-
-  create_table "rumahs", force: :cascade do |t|
-    t.string   "nombor"
-    t.boolean  "sah"
-    t.string   "nama"
-    t.string   "telefon"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "taman_id"
-  end
-
-  create_table "rumahs_tamen", id: false, force: :cascade do |t|
-    t.integer "taman_id", null: false
-    t.integer "rumah_id", null: false
-  end
-
-  create_table "tamen", force: :cascade do |t|
-    t.string   "nama"
-    t.string   "nota"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "tetaman", force: :cascade do |t|

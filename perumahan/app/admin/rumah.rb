@@ -3,7 +3,7 @@ ActiveAdmin.register Rumah do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :nombor, :sah, :nama, :telefon, :nota
+permit_params :nombor, :sah, :nama, :telefon, :nota, :taman_id
 #
 # or
 #
