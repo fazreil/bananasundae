@@ -8,6 +8,8 @@
       <th>Tarikh</th>
       <th>Jumlah</th>
       <th>Nota</th>
+      <th>Nombor Rumah</th>
+      <th>Nama</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +20,9 @@
         <td><%= bayaran.tarikh %></td>
         <td><%= bayaran.jumlah %></td>
         <td><%= bayaran.nota %></td>
+        <% @rerumah = Rumah.all %>
+        <td><%= @rerumah.find(bayaran.rumah_id).nombor unless bayaran.rumah_id.nil? %></td>
+        <td><%= @rerumah.find(bayaran.rumah_id).nama unless bayaran.rumah_id.nil? %></td>
         <td><%= link_to 'Show', bayaran %></td>
         <td><%= link_to 'Edit', edit_bayaran_path(bayaran) %></td>
         <td><%= link_to 'Destroy', bayaran, method: :delete, data: { confirm: 'Are you sure?' } %></td>

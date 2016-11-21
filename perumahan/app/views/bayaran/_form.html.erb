@@ -23,6 +23,11 @@
     <%= f.label :nota %><br>
     <%= f.text_field :nota %>
   </div>
+  <div class="field">
+    <%= f.label :nota %><br>
+    <% @rerumah = Rumah.all %>
+    <%= f.collection_select :rumah_id, @rerumah, :id, :nombor, prompt: "Pilih Nombor Rumah"%>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
