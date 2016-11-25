@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
+<h3 >Listing Rerumah</h3>
 
-<h1>Listing Rerumah</h1>
-
+<div class="table-wrapper">
 <table>
   <thead>
     <tr>
@@ -25,14 +25,16 @@
         <td><%= rumah.nota %></td>
         <% @tetaman = Taman.all %>
         <td><%= @tetaman.find(rumah.taman_id).nama unless rumah.taman_id.nil? %></td>
-        <td><%= link_to 'Show', rumah %></td>
-        <td><%= link_to 'Edit', edit_rumah_path(rumah) %></td>
-        <td><%= link_to 'Destroy', rumah, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', rumah, class: "button special fit small" %></td>
+        <td><%= link_to 'Edit', edit_rumah_path(rumah),  class: "button special fit small" %></td>
+        <td><%= link_to 'Destroy', rumah, method: :delete, data: { confirm: 'Are you sure?' }, class: "button special fit small" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
-<%= link_to 'New Rumah', new_rumah_path %>
+<%= link_to 'New Rumah', new_rumah_path,  class: "button" %>
+<br>
+<br>

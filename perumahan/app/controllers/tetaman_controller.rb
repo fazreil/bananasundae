@@ -1,5 +1,7 @@
 class TetamanController < InheritedResources::Base
 
+layout 'application'
+
   private
 
     def taman_params

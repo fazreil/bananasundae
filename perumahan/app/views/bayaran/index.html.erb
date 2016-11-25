@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Bayaran</h1>
+<h3>Listing Bayaran</h3>
 
+<div class="table-wrapper">
 <table>
   <thead>
     <tr>
@@ -23,14 +24,17 @@
         <% @rerumah = Rumah.all %>
         <td><%= @rerumah.find(bayaran.rumah_id).nombor unless bayaran.rumah_id.nil? %></td>
         <td><%= @rerumah.find(bayaran.rumah_id).nama unless bayaran.rumah_id.nil? %></td>
-        <td><%= link_to 'Show', bayaran %></td>
-        <td><%= link_to 'Edit', edit_bayaran_path(bayaran) %></td>
-        <td><%= link_to 'Destroy', bayaran, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td ><%= link_to 'Show', bayaran, class: "button special fit small"%></td>
+        <td ><%= link_to 'Edit', edit_bayaran_path(bayaran),class: "button special fit small" %></td>
+        <td ><%= link_to 'Destroy', bayaran, method: :delete, data: { confirm: 'Are you sure?' },class: "button special fit small" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 
-<%= link_to 'New Bayaran', new_bayaran_path %>
+<%= link_to 'New Bayaran', new_bayaran_path,  class: "button"  %>
+<br>
+<br>

@@ -1,5 +1,7 @@
 class RerumahController < InheritedResources::Base
 
+layout 'application'
+
   private
 
     def rumah_params

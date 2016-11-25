@@ -1,5 +1,7 @@
 class BayaranController < InheritedResources::Base
 
+layout 'application'
+
   private
 
     def bayaran_params

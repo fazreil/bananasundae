@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'bayaran#index'
   resources :bayaran
   resources :tetaman
   resources :rerumah
